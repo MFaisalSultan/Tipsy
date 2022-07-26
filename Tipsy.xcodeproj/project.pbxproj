@@ -3,23 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103F66B4289021EE005FB67D /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 103F66B3289021EE005FB67D /* Toast */; };
+		10750CE3288984A200E130F5 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10750CE2288984A200E130F5 /* ResultsViewController.swift */; };
 		ADB689532326708D006D4E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689522326708D006D4E2B /* AppDelegate.swift */; };
 		ADB689552326708D006D4E2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689542326708D006D4E2B /* SceneDelegate.swift */; };
-		ADB689572326708D006D4E2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689562326708D006D4E2B /* ViewController.swift */; };
+		ADB689572326708D006D4E2B /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689562326708D006D4E2B /* CalculatorViewController.swift */; };
 		ADB6895A2326708D006D4E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB689582326708D006D4E2B /* Main.storyboard */; };
 		ADB6895C2326708E006D4E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB6895B2326708E006D4E2B /* Assets.xcassets */; };
 		ADB6895F2326708E006D4E2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB6895D2326708E006D4E2B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10750CE2288984A200E130F5 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		ADB6894F2326708D006D4E2B /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB689522326708D006D4E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB689542326708D006D4E2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADB689562326708D006D4E2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADB689562326708D006D4E2B /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		ADB689592326708D006D4E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADB6895B2326708E006D4E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADB6895E2326708E006D4E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,12 +34,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				103F66B4289021EE005FB67D /* Toast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10750CE4288984C300E130F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADB689562326708D006D4E2B /* CalculatorViewController.swift */,
+				10750CE2288984A200E130F5 /* ResultsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		ADB689462326708D006D4E2B = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +71,7 @@
 			children = (
 				ADB689522326708D006D4E2B /* AppDelegate.swift */,
 				ADB689542326708D006D4E2B /* SceneDelegate.swift */,
-				ADB689562326708D006D4E2B /* ViewController.swift */,
+				10750CE4288984C300E130F5 /* Controllers */,
 				ADB689582326708D006D4E2B /* Main.storyboard */,
 				ADB6895B2326708E006D4E2B /* Assets.xcassets */,
 				ADB6895D2326708E006D4E2B /* LaunchScreen.storyboard */,
@@ -83,6 +96,9 @@
 			dependencies = (
 			);
 			name = Tipsy;
+			packageProductDependencies = (
+				103F66B3289021EE005FB67D /* Toast */,
+			);
 			productName = Tipsy;
 			productReference = ADB6894F2326708D006D4E2B /* Tipsy.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +127,9 @@
 				Base,
 			);
 			mainGroup = ADB689462326708D006D4E2B;
+			packageReferences = (
+				103F66B2289021EE005FB67D /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+			);
 			productRefGroup = ADB689502326708D006D4E2B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADB689572326708D006D4E2B /* ViewController.swift in Sources */,
+				ADB689572326708D006D4E2B /* CalculatorViewController.swift in Sources */,
 				ADB689532326708D006D4E2B /* AppDelegate.swift in Sources */,
 				ADB689552326708D006D4E2B /* SceneDelegate.swift in Sources */,
+				10750CE3288984A200E130F5 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		103F66B2289021EE005FB67D /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		103F66B3289021EE005FB67D /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 103F66B2289021EE005FB67D /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ADB689472326708D006D4E2B /* Project object */;
 }
